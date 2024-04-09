@@ -18,11 +18,8 @@ const Category2 = () => {
                 <p className="text-4xl xl:text-5xl font-bold opacity-40 mb-2">
                   Laptop
                 </p>
-                <Button
-                  text="Browse"
-                  bgColor={"bg-primary"}
-                  textColor={"text-white"}
-                />
+                
+                <button  className="bg-white dark:bg-primary text-black dark:text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10 bg text"  >Browse</button>
               </div>
             </div>
             <img
@@ -40,11 +37,8 @@ const Category2 = () => {
                 <p className="text-4xl xl:text-5xl font-bold opacity-20 mb-2">
                   Earphone
                 </p>
-                <Button
-                  text="Browse"
-                  bgColor={"bg-white"}
-                  textColor={"text-brandGreen"}
-                />
+                
+                <button  className="bg-slate-200 dark:bg-slate-600 text-brandGreen cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10 "  >Browse</button>
               </div>
             </div>
             <img src={Image2} alt="" className="w-[320px] absolute bottom-0" />
@@ -58,11 +52,8 @@ const Category2 = () => {
                 <p className="text-4xl xl:text-5xl font-bold opacity-40 mb-2">
                   Gadget
                 </p>
-                <Button
-                  text="Browse"
-                  bgColor={"bg-white"}
-                  textColor={"text-brandBlue"}
-                />
+                
+                <button  className="bg-black dark:bg-white text-brandBlue cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10 "  >Browse</button>
               </div>
             </div>
             <img

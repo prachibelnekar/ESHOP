@@ -73,42 +73,45 @@ const ProductsData2 = [
 ];
 
 const Product = () => {
-  const [ searchInput , setSearchInput ] = useState('');
-  const [ productData , setProductData]= useState([...ProductsData , ...ProductsData2]);
+  const [searchInput, setSearchInput] = useState('');
+  const [productData, setProductData] = useState([...ProductsData, ...ProductsData2]);
   console.log(productData);
   return (
-    <div>
-     
+    <div className="mt-1 bg-white dark:bg-gray-900 dark:text-white">
+
       <div className="container">
         {/* Header Section */}
-        <Heading title="Our Products" subtitle={"Explore our explore"}/>
+        <Heading title="Our Products" subtitle={"Explore our products"} />
         {/* Body Section */}
-        <div className=' ml-[480px]  w-16 mb-5 flex  justify-between items-center gap-4'>
+        <div className="w-0 mb-5 flex  items-center gap-4 container  mx-auto space-y-2 ml-[520px] ">
           {/* Search Bar section */}
-       <div className="relative  group  hidden sm:block">
-       <input
-         type="text"
-         placeholder="Search"
-         value={searchInput}
-         onChange={(e)=>setSearchInput(e.target.value)}
-         className="search-bar text-slate-200"
-       />
-       <IoMdSearch className="text-xl text-gray-600 group-hover:text-primary dark:text-gray-400 absolute top-1/2 -translate-y-1/2 right-3 duration-200" />
-     </div>
+          <div className="relative flex border border-gray-800 rounded-xl w-80">
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              className=" px-2 py-1 text-gray-600 focus:outline-none focus:border-blue-400 w-96"
+            />
+            <IoMdSearch className="text-xl text-gray-600 h-10 w-10 bg-white" />
+          </div>
         </div>
-        <SearchFilter value={searchInput} data={productData}
+
+
+      
+      <SearchFilter className="text-xl text-gray-600 group-hover:text-primary dark:text-gray-400 absolute top-1/2 -translate-y-1/2 right-3 duration-200" value={searchInput} data={productData}
         renderResults={results => (
           <div>
-          {
-            results.map((item , i)=>(
-              <ProductCard data={item} key={i} />
-            ))
-          }</div>
+            {
+              results.map((item, i) => (
+                <ProductCard data={item} key={i} />
+              ))
+            }</div>
         )}></SearchFilter>
-     
-        
-      </div>
+
+</div>
     </div>
+    
   )
 }
 

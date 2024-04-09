@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from './Footer.jsx';
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -25,38 +26,40 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <div className="my-5">
-        <h1 className="text-center">Contact us</h1>
+    <div className="bg-white dark:bg-gray-900 dark:text-white">
+      <div className="my-1">
+        <div className="text-center font-bold text-3xl ">Contact us</div>
       </div>
-      <div className="container contact-div">
-        <div className="row">
-          <div className="col-md-6 col-10 mx-auto">
+      <div className="container  mb-10 max-w-[500px] mx-auto space-y-2">
+        <div className="grid grid-cols-1  gap-6 w-auto mt-16  ">
+          <div>
             <form onSubmit={formSubmit}>
-              <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">Full Name: </label>
-                <input type="text" className="form-control" id="exampleFormControlInput1" name="full_name" defaultValue={data.full_name} placeholder="Enter your full name" />
+              <div className="mb-4 ">
+                <label htmlFor="full_name" className="block text-gray-700 font-bold mb-2">Full Name:</label>
+                <input type="text" id="full_name" name="full_name" value={data.full_name} onChange={InputEvent} placeholder="Enter your full name" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-neutral-900" />
               </div>
-              <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">Phone No: </label>
-                <input type="number" className="form-control" id="exampleFormControlInput1" name="mobile_no" defaultValue={data.mobile_no} onChange={InputEvent} placeholder="Enter your phone number" />
+              <div className="mb-4">
+                <label htmlFor="mobile_no" className="block text-gray-700 font-bold mb-2">Phone No:</label>
+                <input type="tel" id="mobile_no" name="mobile_no" value={data.mobile_no} onChange={InputEvent} placeholder="Enter your phone number" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-neutral-900" />
               </div>
-              <div className="mb-3">
-                <label htmlFor="exampleFormControlInput1" className="form-label">Email: </label>
-                <input type="email" className="form-control" id="exampleFormControlInput1" name="email" defaultValue={data.email} onChange={InputEvent} placeholder="name@example.com" />
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email:</label>
+                <input type="email" id="email" name="email" value={data.email} onChange={InputEvent} placeholder="name@example.com" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-neutral-900" />
               </div>
-              <div className="mb-3">
-                <label htmlFor="exampleFormControlTextarea1" className="form-label">Message</label>
-                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" name="message" defaultValue={data.message} onChange={InputEvent}></textarea>
+              <div className="mb-4">
+                <label htmlFor="message" className="block text-gray-700 font-bold mb-5">Message:</label>
+                <textarea id="message" name="message" value={data.message} onChange={InputEvent} rows="3" placeholder="Your message..." className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-neutral-900"></textarea>
               </div>
-              <div className="col-12">
-                <button className="btn btn-outline-primary" type="submit">Submit</button>
+              <div className="flex justify-center">
+                <button type="submit" className="bg-slate-700 dark:bg-primary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
               </div>
             </form>
           </div>
         </div>
+        
       </div>
-    </>
+      <Footer/>
+    </div>
   );
 }
 

@@ -30,7 +30,7 @@ const BlogData = [
 
 const Blogs = () => {
   return (
-    <div className="my-12">
+    <div className="my-1 bg-white dark:bg-gray-900 dark:text-white h-[636px]">
         <div className="container">
             {/* Header Section */}
             <Heading title="Recent News" subtitle={"Explore our Blogs"}/>

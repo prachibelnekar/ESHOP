@@ -64,7 +64,7 @@ const Navbar = ({ handleOrderPopup }) => {
             <div className="hidden lg:block">
               <ul className="flex items-center gap-8 ml-8">
                 <li className="nav-item">
-                  <NavLink activeclassname="menu_active" exact className="nav-link" aria-current="page" to="/">Home</NavLink>
+                  <NavLink activeclassname="menu_active" exact className="nav-link" aria-current="page" to="/home">Home</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink activeclassname="menu_active" className="nav-link" to="/Shop">Shop</NavLink>
@@ -75,6 +75,11 @@ const Navbar = ({ handleOrderPopup }) => {
                 <li className="nav-item">
                   <NavLink activeclassname="menu_active" className="nav-link" to="/contact">Contact</NavLink>
                 </li>
+                
+                <li className="nav-item">
+                <NavLink activeclassname="menu_active" className="nav-link" to="/signIn">Sign In</NavLink>
+              </li>
+              
 
               </ul>
             </div>

@@ -57,7 +57,7 @@ const Hero = ({handleOrderPopup}) => {
                                     <h1 data-aos="zoom out" data-aos-duration="500" data-aos-once="true" className="text-5xl sm:text-6xl lg:text-7xl font-bold">{data.title}</h1>
                                     <h1 data-aos="zoom out" data-aos-duration="500" data-aos-once="true" className="text-5xl uppercase text-white dark:text-white/5 sm:text-[80px] md:text-[100px] xl:text-[150px] font-bold">{data.title2}</h1>
                                     <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="500" data-aos-delay="300">
-                                        <Button text="Shop By Category" bgColor="bg-primary" textColor="text-white" handler={handleOrderPopup}/>
+                                        <button  className="bg-slate-700 dark:bg-primary text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10"  handler={handleOrderPopup}>Shop By Category</button>
                                     </div>
                                 </div>
                                 {/* Img section */}

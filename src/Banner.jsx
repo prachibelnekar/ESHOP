@@ -21,7 +21,7 @@ const Banner = ({data}) => {
                    <p data-aos="fade-up" className="text-3xl sm:text-5xl font-bold">{data.title3}</p>
                    <p data-aos="fade-up" className="text-sm tracking-wide leading-5">{data.title4}</p>
                    <div data-aos="fade-up" data-aos-offset="0">
-                      <button style={{color: data.bgColor}}className="bg-white py-2 px-4 rounded-full">Shop Now</button>
+                   <button  className="bg-black dark:bg-primary text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10" >Shop Now</button>
                    </div>  
                 </div>
             </div>

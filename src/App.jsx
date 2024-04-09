@@ -8,6 +8,8 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Contact from './Contact.jsx';
 import Home from './Home.jsx';
 import Cart from './Cart.jsx';
+import SignIn from './auth/SignIn.jsx';
+import SignUp from './auth/SignUp.jsx';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -26,19 +28,21 @@ const App = () => {
       AOS.refresh();
     }, []);
     
-            
+     
 
   return (
     <>
       
       <Router>
-      <Navbar handleOrderPopup={handleOrderPopup}/>
+     <Navbar handleOrderPopup={handleOrderPopup} />
       <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/home" element={<Home/>} />
           <Route path="/shop" element={<Product/>} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/blogs" element={<Blogs/>} />
+          <Route path="/signIn" element={<SignIn/>} />
+          <Route path="/" element={<SignUp/>} />
 
       </Routes>
       </Router>
